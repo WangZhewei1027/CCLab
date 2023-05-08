@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- link the styles -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
     <!-- link the styles -->
     <link rel="stylesheet" href="style.css">
@@ -17,10 +16,11 @@
     <script src="lib/p5.sound.js"></script>
 
     <!-- import my script (it is deferred!) -->
-    <script defer src="script_index.js"></script>
+    <script defer src="game1.js"></script>
+
     <style>
         body {
-            background-image: url("lib/rainbow.jpg");
+            background-image: url("lib/background.jpg");
             background-color: #cccccc;
         }
     </style>
@@ -28,22 +28,13 @@
 
 <body>
 
-    <!-- add HTML elements. -->
+    <div id="container">
+        <div id="p5-container">
+
+        </div>
+    </div>
 
 
-    <h1>Jumping Notes</h1>
-    <div id="middle">
-        <a href="game.html">Play</a>
-    </div>
-    <div id="middle">
-        <a href="game1.html">Example 1</a>
-    </div>
-    <div id="middle">
-        <a href="game2.html">Example 2</a>
-    </div>
-    <div id="middle">
-        <a href="game3.html">Example 3</a>
-    </div>
 </body>
 
 </html>

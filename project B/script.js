@@ -62,7 +62,6 @@ function draw() {
       particles.splice(i, 1);
     }
   }
-  console.log(notes.length);
 
   for (let i = 0; i < notes.length; i++) {
     p = notes[i];
@@ -134,7 +133,10 @@ class Button_drum {
   }
 }
 
-function mouseClicked() {
+function mouseReleased() {
+
+  mouse = 1;
+
   for (let i = 0; i < notes.length; i++) {
     let p = notes[i];
     let dis_real = dist(mouseX, mouseY, p.x, p.y);
@@ -154,14 +156,18 @@ function mouseClicked() {
 
 function keyReleased() {
   if (key === 'a') {
-    for (let i = 0; i < stations.length; i++) {
-      let p = stations[i];
-      particles.push(new Particle(p.x, p.y, 255, 191, 155));
+    for (i = 0; i < notes.length; i++) {
+      p = notes[i];
+      console.log('notes.push(new Note(' + p.x + ', ' + p.y + ', 98, 205, 255));');
     }
-  } else if (key === 'b') {
-    notes.push(new Note(mouseX, mouseY, 98, 205, 255));
-  } else if (key === 's') {
-    stations.push(new Station(mouseX, mouseY, 98, 205, 255));
+    for (i = 0; i < stations.length; i++) {
+      p = stations[i];
+      console.log('stations.push(new Station(' + p.x + ',' + p.y + ', 98, 205, 255));');
+    }
+    for (i = 0; i < drums.length; i++) {
+      p = drums[i];
+      console.log('drums.push(new Drum(' + p.x + ',' + p.y + ', 98, 205, 255));');
+    }
   }
 }
 
@@ -194,10 +200,6 @@ function mouseDragged() {
       }
     }
   }
-}
-
-function mouseReleased() {
-  mouse = 1;
 }
 
 class Particle {

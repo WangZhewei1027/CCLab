@@ -17,28 +17,36 @@ canvas {
 #container {
   position: absolute;
   left: 50%;
-  top: 100px;
+  top: 10px;
 }
 
 #middle {
-  position: absolute;
+  margin: 0;
+  position: relative;
+  top: 50%;
   left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 h1 {
 
   font-size: 60px;
-
+  font-family: 'Roboto';
+  text-align: center;
 }
 
 a {
   color: blue;
   text-decoration: none;
   font-size: 40px;
+  text-align: center;
 }
 
 a:hover {
   color: red;
   text-decoration: underline;
   font-size: 40px;
+  text-align: center;
 }
