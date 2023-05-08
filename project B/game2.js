@@ -157,7 +157,7 @@ function mouseReleased() {
     for (let i = 0; i < drums.length; i++) {
         let p = drums[i];
         let dis_real = dist(mouseX, mouseY, p.x, p.y);
-        if ((dis_real < 20) && (dis_real > 0.1)) {
+        if ((dis_real < 30) && (dis_real > 0.1)) {
             p.change();
         }
     }
